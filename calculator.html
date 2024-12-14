@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./styles/calculator.css">
+</head>
+
+<body>
+  <div class="main-div">
+    <div class="calculator">
+      <div class="display-div">
+        <p class="js-calc-display calc-display"></p>
+      </div>
+
+      <p>
+        <p>
+          <button onclick="
+            clearCalc();
+            localStorage.removeItem('calculation');
+          " class="operand-button">x</button>
+          <button onclick="removeLast()" class="operand-button"><</button>
+          <button onclick="updateCalculation('(')" class="operand-button">(</button>
+          <button onclick="updateCalculation(')')" class="operand-button">)</button>
+        </p>
+        <button onclick="
+          updateCalculation('1');
+        " class="operand-button">1</button>
+
+        <button onclick="
+              updateCalculation('2');
+        " class="operand-button">2</button>
+
+        <button onclick="
+          updateCalculation('3');
+        " class="operand-button">3</button>
+
+        <button onclick="
+          updateCalculation('+');
+        " class="operator-button">+</button>
+      </p>
+
+      <p>
+        <button onclick="
+          updateCalculation('4');
+        " class="operand-button">4</button>
+
+        <button onclick="
+          updateCalculation('5');
+        " class="operand-button">5</button>
+
+        <button onclick="
+          updateCalculation('6');
+        " class="operand-button">6</button>
+
+        <button onclick="
+          updateCalculation('-');
+        " class="operator-button">-</button>
+      </p>
+
+      <p>
+        <button onclick="
+          updateCalculation('7');
+        " class="operand-button">7</button>
+
+        <button onclick="
+          updateCalculation('8');
+        " class="operand-button">8</button>
+
+        <button onclick="
+          updateCalculation('9');
+        " class="operand-button">9</button>
+
+        <button onclick="
+          updateCalculation('*');
+        " class="operator-button">*</button>
+      </p>
+
+      <p>
+        <button onclick="
+          updateCalculation('0');
+        " class="operand-button">0</button>
+
+        <button onclick="
+          updateCalculation('.');
+        " class="operand-button">.</button>
+
+        <button onclick="
+          // Note: eval() takes a string and runs it as code.
+          // Avoid using eval() in real world projects since
+          // it can potentially be given harmful code to run.
+          // Only use eval() for learning purposes.
+          calculate();
+        " class="operand-button">=</button>
+
+        <button onclick="
+          updateCalculation('/');
+        " class="operator-button">/</button>
+      </p>
+    </div>
+
+  </div>
+  <script src="./scripts/calculator.js"></script>
+</body>
+
+</html>
